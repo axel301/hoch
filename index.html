@@ -1,0 +1,135 @@
+from pathlib import Path
+
+# HTML content from the canvas
+html_content = """
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guerra Civil en Chernarus - Canal 12 Noticias</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #ffffff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f2f2f2;
+      color: #000;
+      border-bottom: 3px solid #000;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+    header p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+    }
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 40px;
+      border-left: 4px solid #000;
+      padding-left: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    blockquote {
+      font-style: italic;
+      font-size: 18px;
+      color: #333;
+      border-left: 4px solid #888;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Canal 12 Noticias Internacional</h1>
+      <p>Reportaje Especial - 6 de julio de 2035</p>
+    </div>
+    <img src="https://raw.githubusercontent.com/axel301/hoch/prueba-1/logo.png" alt="Logo Canal 12" class="logo" />
+  </header>
+
+  <div class="container">
+    <h1>Estalla la guerra civil en Chernarus tras atentado al gobierno</h1>
+
+    <p><strong>Por Andrei Melnikov</strong> | Equipo de corresponsales en Chernarus</p>
+
+    <h2>El atentado que cambió el curso de Chernarus</h2>
+    <p>El 24 de junio de 2035, un atentado con explosivos en el Palacio Presidencial en Chernagorsk dejó sin vida al presidente Viktor Bayev, al vicepresidente Mikhail Rudenko y a más de una docena de ministros. El ataque fue perpetrado por facciones rebeldes de la 3ra División de Infantería, lideradas por el General Anatoly Rezanov.</p>
+    <p>El General Alexei Morozov asumió el poder y declaró el estado de guerra. Las fuerzas leales mantienen el control de la capital, una pequeña parte del oeste del país, y principalmente del sur y las islas circundantes. Mientras tanto, los rebeldes han tomado el este y el centro del país, incluyendo Solnichniy. Kamyshovo y Elektrozavodsk se encuentran en constante disputa, con combates recurrentes y cambios de control entre las fuerzas gubernamentales y los nacionalistas.</p>
+
+    <h2>Aparición de nuevos actores armados</h2>
+    <p>Además del Ejército de Liberación Nacional de Chernarus (ELNC), surgió el Ejército del Pueblo de Chernarus (EPC), una milicia socialista que tomó partes de Krasnostav. Aunque no participan activamente en combates, la tensión con ambos bandos es elevada.</p>
+
+    <h2>El saqueo del tesoro nacional</h2>
+    <p>El 27 de junio, el ELNC saqueó el Tesoro Nacional en Solnichniy, apoderándose de más del 60% de las reservas en oro. El EPC, tras un intento fallido de asegurar parte de los recursos, logró llevarse una cantidad muy pequeña del tesoro antes de huir hacia el norte atravesando el oeste del país, evitando enfrentamientos directos.</p>
+
+    <h2>Declaraciones oficiales</h2>
+    <blockquote>
+      <strong>General Alexei Morozov:</strong> “No permitiremos que nuestra nación caiga en manos de traidores ni extremistas. Luchamos por el futuro democrático de Chernarus.”  
+    </blockquote>
+    <blockquote>
+      <strong>General Anatoly Rezanov:</strong> “El gobierno se ha vendido a Europa. Nosotros, los verdaderos hijos de Chernarus, luchamos por una nación fuerte e independiente.”  
+    </blockquote>
+
+    <h2>Conclusión</h2>
+    <p>Con la nación fragmentada, la guerra civil en Chernarus representa una amenaza para la estabilidad regional. La comunidad internacional observa con creciente preocupación mientras la lucha por el futuro de Chernarus continúa.</p>
+
+    <h2>Novedades del 6 de julio a las 19:36</h2>
+    <p>El gobierno nacional está planteando contratar mercenarios para apoyar a sus fuerzas y detener esta guerra civil. Sin embargo, la cantidad ofrecida resulta insuficiente para atraer compañías privadas, lo que ha dejado la propuesta sin interesados hasta el momento.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2035 Canal 12 Noticias Internacional - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
+"""
+
+# Save to HTML file
+file_path = "/mnt/data/guerra_civil_chernarus.html"
+Path(file_path).write_text(html_content, encoding="utf-8")
+
+file_path

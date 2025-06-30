@@ -1,3 +1,7 @@
+from pathlib import Path
+
+# HTML content from the canvas
+html_content = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -122,3 +126,10 @@
   </footer>
 </body>
 </html>
+"""
+
+# Save to HTML file
+file_path = "/mnt/data/guerra_civil_chernarus.html"
+Path(file_path).write_text(html_content, encoding='utf-8')
+
+file_path
